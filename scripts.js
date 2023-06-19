@@ -88,15 +88,13 @@
 
 // // Решение: 
 
-// // function getSquare(min, max) {
+// function getSquare(min, max) {
 
-// //     for (let i = min; i <= max; i++) {
-// //         let rezult = i ** 2;
-// //         console.log(rezult);
-// //     }
-// //     return rezult;
-// // } //( не понимаю, почему после вычисления пишет ошибку??)
-// // console.log(getSquare(+prompt('Введите минимальное число'), +prompt('Введите максимальное число')));
+//     for (let i = min; i <= max; i++) {
+//         console.log(i ** 2);
+//     }
+// }
+// getSquare (6,10);
 
 // // Задание 8
 
@@ -117,14 +115,61 @@
 
 // Решение: 
 
-// const minNum = 0;
-// const maxNum = 255;
-
 // function getRandomInteger(min, max) {
 //     return Math.floor(Math.random() * (max - min)) + min;
 //     }
-// function getRandomRGB (x, y, z) {
 
-//  console.log (`rgb(${x},${y},${z})`);
+// function getRandomRGB () {
+
+//  console.log (`rgb(${getRandomInteger(0, 255)},${getRandomInteger(0, 255)},${getRandomInteger(0, 255)}) `);
 
 // }
+// getRandomRGB ();
+
+// Задание 9
+
+// Написать функцию, которая принимает целое число n.   
+// Внутри функции запустить цикл от 1 до n с шагом 0.5. На каждой итерации цикла выводить в консоль текущее 
+// число (i) и информацию о том, целое ли оно.
+// Такая функция не будет ничего возвращать, она просто выводит информацию в консоль.
+
+// Пример, при запуске функции с параметром 3:
+
+// "1 integer"
+// "1.5 decimal"
+// "2 integer"
+
+// "2.5 decimal"
+
+// Решение:
+
+// function getInteger(n) {
+//     for (i = 1; i < n; i += 0.5) {
+//         if (i % 1 === 0) {
+//             console.log(`${i} integer`);
+//         } else console.log(`${i} decimal`);
+//     }
+// }
+// getInteger(6);
+
+// Задание 11
+
+// Написать функцию calcPrice, которая рассчитывает и выводит в консоль стоимость аренды авто на кол-во дней, 
+// которое приходит в функцию как параметр.
+// День аренды автомобиля стоит $40. При аренде на 7 или больше дней вы получаете общую итоговую скидку $50. 
+// Если вы арендуете авто на 3 или более дней, ваша общая скидка составит $20.
+
+// Решение:
+
+// function calcPrice(n) {
+//     if (n <= 0) {
+//         console.log('Введите корректное число')
+//     }
+//     else if (n >= 7) {
+//         console.log(n * 40 - 50);
+//     }
+//     else if (n >= 3 && n < 7) {
+//         console.log(n * 40 - 20);
+//     } else console.log(n * 40);
+// }
+// calcPrice(8);
